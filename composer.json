@@ -1,0 +1,15 @@
+{
+    "name": "henriquebs0/router",
+    "autoload": {
+        "psr-4": {
+            "HenriqueBS0\\Router\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "HenriqueBS0",
+            "email": "henrique.10agr@gmail.com"
+        }
+    ],
+    "require": {}
+}
