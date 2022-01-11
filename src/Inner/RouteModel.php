@@ -39,7 +39,7 @@ class RouteModel
 
         foreach ($parts as $position => $value) {
             if (self::partIsParameter($value)) {
-                $this->positionParametersPath[self::getNameParameter($value)] = $position;
+                $this->positionParametersPath[] = [self::getNameParameter($value) => $position];
             }
         }
     }
