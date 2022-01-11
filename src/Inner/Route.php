@@ -47,8 +47,8 @@ class Route
 
         $uriParts = $this->routeModel->explodeByBar($uri);
 
-        foreach ($this->routeModel->getPositionParametersPath() as $parameter => $position) {
-            $parameters[$parameter] = $uriParts[$position];
+        foreach ($this->routeModel->getPositionParametersPath() as $position) {
+            $parameters[] = $uriParts[$position];
         }
 
         return $parameters;

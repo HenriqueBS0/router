@@ -39,7 +39,7 @@ class RouteModel
 
         foreach ($parts as $position => $value) {
             if (self::partIsParameter($value)) {
-                $this->positionParametersPath[] = [self::getNameParameter($value) => $position];
+                $this->positionParametersPath[] = $position;
             }
         }
     }
@@ -70,10 +70,5 @@ class RouteModel
         $lastCharacter = substr($pathPart, -1);
 
         return $firstCharacter === '{' && $lastCharacter === '}';
-    }
-
-    private static function getNameParameter(string $pathPart): string
-    {
-        return substr(substr($pathPart, 1), 0, -1);
     }
 }
