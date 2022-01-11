@@ -29,10 +29,7 @@ class RouteModelTest extends TestCase
     {
         $routerModel = new RouteModel('user/{id}/note/{id}');
 
-        $expectedPositionParametersPath = [
-            ['id' => 1],
-            ['id' => 3]
-        ];
+        $expectedPositionParametersPath = [1, 3];
 
         $this->assertEquals($expectedPositionParametersPath, $routerModel->getPositionParametersPath());
     }
