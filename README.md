@@ -231,7 +231,7 @@ $router->setMiddlewares([
  * Binding middleware specifically to route
  */
 $router->get('/', function() {
-    'Hello World';
+    echo 'Hello World';
 }, [MiddlwareRouteOne::class, MiddlwareRouteTwo::class]);
 
 $router->resolve();
