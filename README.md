@@ -53,11 +53,11 @@ To add routes there are five methods that are directly related to HTTP methods, 
 <form method="POST">
     <label for="_method">Method</label>
     <select name="_method" id="_method">
-        <option value="GET" <?php if($_REQUEST['_method'] === 'GET') {echo 'selected';}?>>GET</option>
-        <option value="POST" <?php if($_REQUEST['_method'] === 'POST') {echo 'selected';}?>>POST</option>
-        <option value="PUT" <?php if($_REQUEST['_method'] === 'PUT') {echo 'selected';}?>>PUT</option>
-        <option value="PATCH" <?php if($_REQUEST['_method'] === 'PATCH') {echo 'selected';}?>>PATCH</option>
-        <option value="DELETE" <?php if($_REQUEST['_method'] === 'DELETE') {echo 'selected';}?>>DELETE</option>
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="PATCH">PATCH</option>
+        <option value="DELETE">DELETE</option>
     </select>
     <input type="submit" value="Send">
 </form>
@@ -231,7 +231,7 @@ $router->setMiddlewares([
  * Binding middleware specifically to route
  */
 $router->get('/', function() {
-    'Hello World';
+    echo 'Hello World';
 }, [MiddlwareRouteOne::class, MiddlwareRouteTwo::class]);
 
 $router->resolve();
