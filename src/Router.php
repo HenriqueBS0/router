@@ -7,7 +7,7 @@ use HenriqueBS0\Router\Inner\RouteStore;
 
 class Router extends RouteStore
 {
-    private Closure $callbackNotFound;
+    private Closure|array $callbackNotFound;
 
     public function __construct()
     {
