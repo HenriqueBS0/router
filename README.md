@@ -7,10 +7,20 @@ Composer
 ```bash
 composer require henriquebs0/router dev-main
 ```
-
 ## Routes
 To start managing routes, just instantiate an object of the <code>Router</code> class in a central point of your application where all requests pass (Ex: the file <strong>index.php</strong>), add the routes and at the end call the <code>resolve()</code> method.
 
+### htaccess
+```htaccess
+RewriteEngine On
+
+# ROUTER URL Rewrite
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+```
+
+### index.php
 ```php
 <?php
 
