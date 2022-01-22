@@ -9,8 +9,10 @@ class Router extends RouteStore
 {
     private Closure|array $callbackNotFound;
 
-    public function __construct()
+    public function __construct(string $baseUri = '/')
     {
+        RouteStore::$baseUri = $baseUri;
+
         $this->callbackNotFound = function () {
             http_response_code(404);
             echo '404';

@@ -8,7 +8,7 @@ Composer
 composer require henriquebs0/router dev-main
 ```
 ## Routes
-To start managing routes, just instantiate an object of the <code>Router</code> class in a central point of your application where all requests pass (Ex: the file <strong>index.php</strong>), add the routes and at the end call the <code>resolve()</code> method.
+To start managing routes, just instantiate an object of the <code>Router(string $baseUri = '/')</code> class in a central point of your application where all requests pass (Ex: the file <strong>index.php</strong>), add the routes and at the end call the <code>resolve()</code> method.
 
 ### htaccess
 ```htaccess

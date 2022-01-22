@@ -4,6 +4,8 @@ namespace HenriqueBS0\Router\Inner;
 
 abstract class RouteStore
 {
+    protected static string $baseUri;
+
     private array $middlewares = [];
     private string $group = '';
     private array $routes = [
@@ -49,7 +51,9 @@ abstract class RouteStore
 
     private function addRoute(string $httpMethod, string $path, callable|array $callback, array $middlewaresClasses = []): void
     {
-        $path = $this->getGroup() . $path;
+        $path = self::$baseUri !== '/'
+            ? self::$baseUri . $this->getGroup() . $path
+            : $this->getGroup() . $path;
 
         $path = $path !== '/' ? rtrim($path, '/') : $path;
 
