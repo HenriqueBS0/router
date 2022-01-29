@@ -401,6 +401,8 @@ Note that classes that extend <code>RoutesGroup</code> have the reserved method 
 
 >The <code>group</code> method in the scope of the <code>setRoutes</code> method does not interfere with the <code>group</code> method of the <code>Router</code> class instance, the opposite too does not occur.
 
+> Example project: <a href="https://github.com/HenriqueBS0/link-pack">Link Pack</a>
+
 ## License
 
 #### The MIT License (MIT). Please see <a href="https://github.com/HenriqueBS0/router/blob/main/LICENSE">License file</a> for more information.
